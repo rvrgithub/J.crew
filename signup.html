@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/11e556d214.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+              body {
+        background-color: black;
+      }
+      #container {
+        width: 400px;
+        height: 580px;
+        margin: 40px auto;
+        border: 1px solid black;
+        text-align: center;
+       background-color: white;
+      }
+      #container >p:nth-child(1){
+        font-size: 20px;
+        font-family: soleil, Helvetica, Arial, sans-serif;
+        font-weight: 650;
+      }
+     form >input {
+        width: 80%;
+        height: 40px;
+        margin-bottom: 20px;
+      }
+      #signup {
+        margin: 20px 30px;
+     
+        background-color: black;
+        color: wheat;
+        text-align: center;
+        padding-left: 20px;
+      }
+      select {
+        width: 81.5%;
+        height: 43px;
+        margin-bottom: 20px;
+      }
+      #box2 {
+        display: flex;
+      }
+      #box2 p {
+        margin: 0 10px;
+      }
+      #blue {
+        width: 100x;
+        height: 100x;
+        background-color: white;
+        color: white;
+      }
+      #blue:hover {
+        background-color: rgb(100, 175, 245);
+        color: white;
+      }
+      #box2 > button {
+        width: 20px;
+        height: 20px;
+        margin-left: 35px;
+      }
+      #signI {
+        margin: 10px 35px;
+        text-align: center;
+        line-height: 16px;
+        font-family: soleil, Helvetica, Arial, sans-serif;
+        font-size: 12px;
+      }
+      #signin {
+        display: flex;
+        margin:   10px 30px;
+        padding: 20px 40px;
+        border-top: 1px solid rgb(206, 202, 202);
+        font-family: soleil, Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        justify-content: space-between;
+      }
+
+      #signin > p:nth-child(2) {
+        color: #3883ff;
+      }
+      #box{
+        margin-left:45px
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <p>Sign Up</p>
+      <form>
+        <input id="email" type="text" placeholder="   Email Address*" />
+        <input id="pass" type="text" placeholder="  Create Password*" />
+        <select id="cat">
+          <option>America</option>
+          <option>Australia</option>
+          <option>Brazil</option>
+          <option>Canada</option>
+          <option>France</option>
+          <option>India</option>
+          <option>Maldive</option>
+          <option>Pakistan</option>
+          <option>Oman</option>
+          <option>Shri Lanka</option>
+          <option>Romania</option>
+          <option>Singapore</option>
+          <option>Thailand</option>
+        </select>
+        <div id="box2">
+          <input type="checkbox" id="box">
+          <p>Remember me</p>
+
+          <i class="fas fa-info-circle"></i>
+        </div>
+        <input id="signup" type="submit" value="Sign Up" value="CREATE AN ACCOUNT"/>
+      </form>
+      <p id="signI">By clicking "Create an Account", you agree to our Terms of Use and Privacy Policy, including the Use of Cookies and the transfer of your personal information to the United States, a jurisdiction that may not provide an equivalent level of data protection to the laws in your home country.</p>
+      <div id="signin">
+        <p>Already have an account?</p>
+        <p>Sign In</p>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.querySelector("form").addEventListener("submit", formSubmit);
+  var userData = JSON.parse(localStorage.getItem("userDataBase")) || [];
+  function formSubmit(event) {
+    event.preventDefault();
+    var email = document.querySelector("#email").value;
+    var pass = document.querySelector("#pass").value;
+    console.log(email,pass);
+    var dataObj = {
+      userEmail: email,
+      userPass: pass,
+    };
+    // console.log(dataObj);
+    userData.push(dataObj);
+    // console.log(userData);
+    localStorage.setItem("userDataBase", JSON.stringify(userData));
+  }
+  document.getElementById("signin").addEventListener("click", function () {
+    window.location.href = "signin.html";
+  });
+  document.getElementById("signup").addEventListener("click", function () {
+    window.location.href = "land_page.html";
+  });
+</script>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/11e556d214.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+      #container {
+        width: 100%;
+        height: 60px;
+        border-bottom: 1px solid rgb(218, 215, 215);
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+       z-index: 10; 
+        margin:0;
+        background-color: white;
+        cursor: pointer;
+        top: 0px;
+      }
+      
+      #container > div:nth-child(1) {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        font-size: 17px;
+      }
+      #container > div:nth-child(2) {
+        display: flex;
+        width: 30%;
+        justify-content: space-evenly;
+      }
+      img {
+        width: 150px;
+        height: 30px;
+        margin: 0 20px;
+      }
+      #container > div > div:nth-child(7) {
+        color: red;
+      }
+      input {
+        width: 150px;
+        height: 30px;
+        font-size: 20px;
+        border: 1px solid rgb(248, 242, 242);
+      }
+      #search {
+        height: 20px;
+        width: 25px;
+        margin: 5px;
+      }
+      input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+      #sec_div {
+        padding: 10px;
+      }
+      #sec_div > div:nth-child(1) {
+        display: flex;
+        margin: 0;
+        width: 200px;
+        height: 35px;
+        font-size: 17px;
+        border: 1px solid black;
+      }
+      #sec_div > div:nth-child(2) {
+        font-size: 18px;
+        margin-top: 8px;
+      }
+      #login {
+        height: 20px;
+        width: 25px;
+        margin: 5px;
+      }
+    
+       
+#dropdown{
+ 
+  display: grid;
+  position: relative;
+}
+
+#drop_lis{
+  display: none;
+  position: absolute;
+  background-color: white;
+  border-top: 1.5px solid black;
+  width:fit-content;
+  margin-top: 39px;
+  z-index: 1;
+}
+
+#drop_lis a:nth-child(1){
+  font-size: 20px;
+  font-weight: bolder;
+}
+#drop_lis a{
+  color: black;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+#dropdown:hover #drop_lis{
+  display: block;
+  border: 1px solid black;
+  height: 400px;
+}
+#drop_lis a:hover{
+  width:fit-content;
+  border-bottom:1px solid black;
+  
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div>
+        <div>
+          <img
+            id="nav"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR35ReW6qeu-PQNts_NgPBnalUFT5X0E1TYJsYFulEaiiHzpn4MO1-VALdL_AwE8W3FKMA&usqp=CAU"
+            alt="Error"
+          />
+        </div>
+        <div id="dropdown">
+        <div id="new_drop" >New</div>
+  <div id="drop_lis">
+    <a href="#">Shop New Arrivals</a>
+    <a href="#">For Women</a> 
+    <a href="#">For Men</a>
+    <a href="#">  For Girls</a>
+    <a href="#">For Boys</a>
+  
+  </div>
+<div id="drop_lis">
+  <a href="#">Women’s Stories</a>
+  <a href="#">  STYLE</a>
+  <a href="#">What to wear next: cashmere & denim with Brie Welch</a>
+  <a href="#">What to wear next: cashmere & denim with Brie Welch</a>
+
+  <a href="#">Destination: Sun with Clémentine Desseaux</a>
+  <a href="#">EDITS</a>
+  <a href="#">Most wanted: the colorblock quilted puffer jacket</a>
+  <a href="#"> The edit: trail mix</a>
+  <a href="#">The edit: sorbet shades</a>
+</div>
+<div id="drop_lis">
+  <a href="#">Women’s Stories</a>
+  <a href="#">  STYLE</a>
+  <a href="#">What to wear next: cashmere & denim with Brie Welch</a>
+  <a href="#">What to wear next: cashmere & denim with Brie Welch</a>
+
+  <a href="#">Destination: Sun with Clémentine Desseaux</a>
+  <a href="#">EDITS</a>
+  <a href="#">Most wanted: the colorblock quilted puffer jacket</a>
+  <a href="#"> The edit: trail mix</a>
+  <a href="#">The edit: sorbet shades</a>
+</div>
+<div></div>
+<div></div>
+</div>
+        <div id="women">Women</div>
+        <div id="men">Men</div>
+        <div id="kids">Kids</div>
+        <div id="cas">Cashmere</div>
+        <div id="sale">Sale</div>
+      </div>
+      <div id="sec_div">
+        <div>
+          <div>
+            <img
+              id="search"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2rFpWpJgyvrdrNVoJzcKk1qgjUvQH1x9a0Q&usqp=CAU"
+            />
+          </div>
+          <input type="text" placeholder="Search j.crew" />
+        </div>
+        <div id="signin">Sign In</div>
+        <div>
+          <img 
+            id="login"
+            src="https://www.clipartkey.com/mpngs/m/319-3198586_password-icons-png.png"
+          />
+        </div>
+      </div>
+    </div>
+   
+  </body>
+</html>
+<script>
+  document.getElementById("nav").addEventListener("click", function () {
+    window.location.href = "land_page.html";
+  });
+  document.getElementById("men").addEventListener("click", function () {
+    window.location.href = "men.html";
+  });
+  document.getElementById("women").addEventListener("click", function () {
+    window.location.href = "women.html";
+  });
+  document.getElementById("kids").addEventListener("click", function () {
+    window.location.href = "kids.html";
+  });
+  document.getElementById("cas").addEventListener("click", function () {
+    window.location.href = "cas.html";
+  });
+  document.getElementById("sale").addEventListener("click", function () {
+    window.location.href = "sale.html";
+  });
+  document.getElementById("search").addEventListener("click", function () {
+    window.location.href = "search.html";
+  });
+  document.getElementById("signin").addEventListener("click", function () {
+    window.location.href = "signin.html";
+  });
+  document.getElementById("login").addEventListener("click", function () {
+    window.location.href = "login.html";
+  });
+  document.getElementById("help").addEventListener("click", function () {
+    window.location.href = "help.html";
+  });
+</script>

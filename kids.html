@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/11e556d214.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+      /* nav bar............. */
+      #container {
+        width: 100%;
+        height: 60px;
+        border-bottom: 1px solid rgb(218, 215, 215);
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+       z-index: 10; 
+        margin:0;
+        background-color: white;
+        cursor: pointer;
+        top: 0px;
+      }
+      
+      #container > div:nth-child(1) {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        font-size: 17px;
+      }
+      #container > div:nth-child(2) {
+        display: flex;
+        width: 30%;
+        justify-content: space-evenly;
+      }
+      img {
+        width: 150px;
+        height: 30px;
+        margin: 0 20px;
+      }
+      #container > div > div:nth-child(7) {
+        color: red;
+      }
+      input {
+        width: 150px;
+        height: 30px;
+        font-size: 20px;
+        border: 1px solid rgb(248, 242, 242);
+      }
+      #search {
+        height: 20px;
+        width: 25px;
+        margin: 5px;
+      }
+      input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+      #sec_div {
+        padding: 10px;
+      }
+      #sec_div > div:nth-child(1) {
+        display: flex;
+        margin: 0;
+        width: 200px;
+        height: 35px;
+        font-size: 17px;
+        border: 1px solid black;
+      }
+      #sec_div > div:nth-child(2) {
+        font-size: 18px;
+        margin-top: 8px;
+      }
+      #login {
+        height: 20px;
+        width: 25px;
+        margin: 5px;
+      }
+    
+       
+#dropdown{
+ 
+  display: grid;
+  position: relative;
+}
+
+#drop_lis{
+  display: none;
+  position: absolute;
+  background-color: white;
+  border-top: 1.5px solid black;
+  width:fit-content;
+  margin-top: 39px;
+  z-index: 1;
+}
+
+#drop_lis a:nth-child(1){
+  font-size: 20px;
+  font-weight: bolder;
+}
+#drop_lis a{
+  color: black;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+#dropdown:hover #drop_lis{
+  display: block;
+  border: 1px solid black;
+  height: 400px;
+}
+#drop_lis a:hover{
+  width:fit-content;
+  border-bottom:1px solid black;
+  
+}
+/* end of nav bar............ */
+
+
+
+/* kids porduct :start....................... */
+#kids_container{
+    width: 98%;
+    /* border: 1px solid rgb(212, 23, 23); */
+    display: flex;
+}
+#left_div{
+    width:27%;
+    margin-top: 10px;
+    height: 400px;
+    position: fixed;
+    border: 1px solid rgb(207, 207, 207);
+}
+form{
+  position: fixed;
+  margin-top: 20px;
+}
+
+#right_div{
+    width: 85%;
+    margin-left: 420px;
+    display: grid;
+    grid-gap:10px;
+    padding: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    /* border: 1px solid rgb(194, 2, 2); */
+}
+#right_div>div{
+    height: 370px;
+    /* border: 1px solid rgb(194, 2, 2); */
+}
+#right_div>div:hover{
+  box-shadow: rgb(61, 64, 66) 0px 20px 30px -10px;
+}
+#right_div img{
+    margin-left: 0;
+    width: 100%;
+    height: 65%;
+}
+#right_div p{
+    margin-left: 10px;
+    /* color: red; */
+  	font-family :soleil, Helvetica, Arial, sans-serif;
+    line-height: 5px;
+}
+#right_div p:nth-child(3){
+  font-size: 12px;
+}
+#head{
+    text-align: center;
+    margin: 30px ;
+    font-size: 35px;
+}
+button{
+  margin-left: 10px;
+}
+h3{
+    margin-top: 80px;
+    text-align: center;
+}
+label {
+        margin: 30px;
+        font-weight: 700;
+      }
+      select {
+        display: flex;
+        margin: 10px 30px;
+        width: 250px;
+        font-size: 17px;
+        height: 35px;
+      }
+      select {
+        display: flex;
+        /* margin: 20px; */
+        width: 300px;
+        font-size: 20px;
+        height: 30px;
+      }
+#box{
+        margin: 10px;
+       
+      }
+      #box input{
+        width: 20px;
+        height: 20px;
+        margin-left: 30px;
+        margin-right: 10px;
+      }
+
+#box>div{
+  display: flex;
+};
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div>
+        <div>
+          <img
+            id="nav"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR35ReW6qeu-PQNts_NgPBnalUFT5X0E1TYJsYFulEaiiHzpn4MO1-VALdL_AwE8W3FKMA&usqp=CAU"
+            alt="Error"
+          />
+        </div>
+        <!-- <div id="dropdown"> -->
+        <div id="new_drop" >New</div>
+  <!-- <div id="drop_lis">
+    <a href="#">Shop New Arrivals</a>
+    <a href="#">For Women</a> 
+    <a href="#">For Men</a>
+    <a href="#">  For Girls</a>
+    <a href="#">For Boys</a>
+  
+  </div>
+<div id="drop_lis">
+  <a href="#">Women’s Stories</a>
+  <a href="#">  STYLE</a>
+  <a href="#">What to wear next: cashmere & denim with Brie Welch</a>
+  <a href="#">What to wear next: cashmere & denim with Brie Welch</a>
+
+  <a href="#">Destination: Sun with Clémentine Desseaux</a>
+  <a href="#">EDITS</a>
+  <a href="#">Most wanted: the colorblock quilted puffer jacket</a>
+  <a href="#"> The edit: trail mix</a>
+  <a href="#">The edit: sorbet shades</a>
+</div>
+<div id="drop_lis">
+  <a href="#">Women’s Stories</a>
+  <a href="#">  STYLE</a>
+  <a href="#">What to wear next: cashmere & denim with Brie Welch</a>
+  <a href="#">What to wear next: cashmere & denim with Brie Welch</a>
+
+  <a href="#">Destination: Sun with Clémentine Desseaux</a>
+  <a href="#">EDITS</a>
+  <a href="#">Most wanted: the colorblock quilted puffer jacket</a>
+  <a href="#"> The edit: trail mix</a>
+  <a href="#">The edit: sorbet shades</a>
+</div>
+<div></div>
+<div></div>
+</div> -->
+        <div id="women">Women</div>
+        <div id="men">Men</div>
+        <div id="kids">Kids</div>
+        <div id="cas">Cashmere</div>
+        <div id="sale">Sale</div>
+      </div>
+      <div id="sec_div">
+        <div>
+          <div>
+            <img
+              id="search"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2rFpWpJgyvrdrNVoJzcKk1qgjUvQH1x9a0Q&usqp=CAU"
+            />
+          </div>
+          <input type="text" placeholder="Search j.crew" />
+        </div>
+        <div id="signin">Sign In</div>
+        <div>
+          <img 
+            id="login"
+            src="https://www.clipartkey.com/mpngs/m/319-3198586_password-icons-png.png"
+          />
+        </div>
+      </div>
+    </div>
+    <h3>Have a question? We can help.-*</h3>
+    <p id="head" >GIRLS' NEW ARRIVALS</p >
+   <div id="kids_container">
+<div id="left_form">
+   <form>
+    <label id="cat">Category</label>
+    <br />
+    <div id="box" >
+      <div><input type="checkbox" /> Skinny</div>
+      <div><input type="checkbox"  /> Slim </div>
+      <div><input type="checkbox" /> Straight </div>
+  <div>    <input type="checkbox" /> Athletic </div>
+    <div>  <input type="checkbox"  /> Classic Straight</div>
+    </div>
+
+    <label>New Arrival</label>
+    <select>
+      <option>Select One</option>
+      <option>Price:Low -High</option>
+      <option>Price:High -Low</option>
+      <option></option>
+    </select>
+    <label>Size</label>
+    <select>
+      <option>Select One</option>
+      <option>Pents</option>
+      <option>T_shirts</option>
+      <option>Shoes</option>
+      <option>Sliper</option>
+      <option></option>
+    </select>
+    <label>Discount</label>
+    <select>
+      <option></option>
+      <option>Less Than 40% Off</option>
+      <option></option>
+    </select>
+  </form>
+  </div></div>
+  </body>
+</html>
+<script>
+  document.getElementById("nav").addEventListener("click", function () {
+    window.location.href = "land_page.html";
+  });
+  document.getElementById("men").addEventListener("click", function () {
+    window.location.href = "man.html";
+  });
+  document.getElementById("women").addEventListener("click", function () {
+    window.location.href = "women.html";
+  });
+  document.getElementById("kids").addEventListener("click", function () {
+    window.location.href = "kids.html";
+  });
+  document.getElementById("cas").addEventListener("click", function () {
+    window.location.href = "cas.html";
+  });
+  document.getElementById("sale").addEventListener("click", function () {
+    window.location.href = "sale.html";
+  });
+  document.getElementById("signin").addEventListener("click", function () {
+    window.location.href = "signin.html";
+  });
+  document.getElementById("login").addEventListener("click", function () {
+    window.location.href = "login.html";
+  });
+
+ kidsObj =[
+     {
+    
+    imgUrl:"https://www.jcrew.com/s7-img-facade/AZ802_WT0002?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+    p1:"ONLY A FEW LEFT",
+    p2: "girls Girls' long-sleeve heart-pocket T-shirt",
+    price:3683,
+},
+{
+imgUrl:"https://www.jcrew.com/s7-img-facade/AZ661_BK0001?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+    p1:"ONLY A FEW LEFT",
+    p2: "girls Girls' long-sleeve heart-pocket T-shirt",
+    price:3683,
+}, {
+    imgUrl:"https://www.jcrew.com/s7-img-facade/AZ661_BL7256?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+    p1:"ONLY A FEW LEFT",
+    p2: "girls Girls' long-sleeve heart-pocket T-shirt",
+    price:4683,
+},
+{
+    
+    imgUrl:"https://www.jcrew.com/s7-img-facade/AZ802_PK5498?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+    p1:"ONLY A FEW LEFT",
+    p2: "girls Girls' long-sleeve heart-pocket T-shirt",
+    price:2683,
+},
+{
+imgUrl:"https://www.jcrew.com/s7-img-facade/AZ927_WQ6197?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+    p1:"ONLY A FEW LEFT",
+    p2: "girls Girls' long-sleeve heart-pocket T-shirt",
+    price:1683,
+}, {
+    imgUrl:"https://www.jcrew.com/s7-img-facade/AZ802_WT0002?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+    p1:"ONLY A FEW LEFT",
+    p2: "girls Girls' long-sleeve heart-pocket T-shirt",
+    price:3183,
+},
+{
+    
+    imgUrl:"https://www.jcrew.com/s7-img-facade/AZ802_WT0002?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+    p1:"ONLY A FEW LEFT",
+    p2: "girls Girls' long-sleeve heart-pocket T-shirt",
+},
+{
+imgUrl:"https://www.jcrew.com/s7-img-facade/AZ802_WT0002?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+    p1:"ONLY A FEW LEFT",
+    p2: "girls Girls' long-sleeve heart-pocket T-shirt",
+}, {
+    imgUrl:"https://www.jcrew.com/s7-img-facade/AZ802_WT0002?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+    p1:"ONLY A FEW LEFT",
+    p2: "girls Girls' long-sleeve heart-pocket T-shirt",
+},
+{
+    
+    imgUrl:"https://www.jcrew.com/s7-img-facade/AZ802_WT0002?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+    p1:"ONLY A FEW LEFT",
+    p2: "girls Girls' long-sleeve heart-pocket T-shirt",
+},
+{
+imgUrl:"https://www.jcrew.com/s7-img-facade/AZ802_WT0002?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+    p1:"ONLY A FEW LEFT",
+    p2: "girls Girls' long-sleeve heart-pocket T-shirt",
+}, {
+    imgUrl:"https://www.jcrew.com/s7-img-facade/AZ802_WT0002?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+    p1:"ONLY A FEW LEFT",
+    p2: "girls Girls' long-sleeve heart-pocket T-shirt",
+},
+];
+  
+var quickAdd =JSON.parse(localStorage.getItem("quickAddItem"))||[];
+// kidsObj =JSON.parse(localStorage.getItem("kidsDataBase"))||[];
+var left_div=document.createElement("div");
+left_div.setAttribute("id","left_div");
+var right_div =document.createElement("div");
+right_div.setAttribute("id","right_div");
+kidsObj.map(function(element){
+    var boxDiv=document.createElement("div");
+    var image =document.createElement("img");
+    var p1=document.createElement("p");
+    var p2 =document.createElement("p");
+    var p3=document.createElement("p");
+    var btn =document.createElement("button");
+    image.setAttribute("src" ,element.imgUrl);
+    p1.textContent = element.p1;
+    p2.textContent = element.p2;
+    p3.textContent=element.price;
+    btn.textContent="QUICK SHOP"
+    btn.addEventListener("click",function(){
+        quickShop(element);
+    });
+
+    boxDiv.append(image,p1,p2,p3,btn);
+    right_div.append(boxDiv);
+    // kidsData.push(kidsObj);
+
+
+document.querySelector("#kids_container").append(left_div,right_div);
+localStorage.setItem("kidsDataBase", JSON.stringify(kidsObj));
+console.log(kidsObj);
+});
+var count=0;
+function quickShop(element){
+  // quickAdd.innerHtml="";
+console.log(element);
+quickAdd=[element];
+localStorage.setItem("quickAddItem", JSON.stringify(quickAdd));
+
+    window.location.href = "card.html";
+};
+
+// var count=0;
+// function add_card(element){
+//   // event.preventDefault();
+//   document.querySelector("#login").innerHTML =count;
+//   console.log("inside inc");
+//   shop_arr.push(element);
+//   console.log(shop_arr);
+//   localStorage.setItem("shopItmeData", JSON.stringify(shop_arr));
+// };
+
+</script>

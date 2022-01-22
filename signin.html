@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/11e556d214.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      #serach {
+        width: 400px;
+        height: 580px;
+        margin: 50px auto;
+        border: 1px solid black;
+        text-align: center;
+        background-color: white;
+      }
+      #form > input {
+        width: 80%;
+        height: 40px;
+        margin-bottom: 20px;
+      }
+      #serach > div {
+        display: flex;
+      }
+
+      #serach > div p {
+        margin: 0px 10px;
+      }
+      #box2{
+        display: flex;
+      }
+      #box2 p{
+        margin: 0 10px;
+      }
+      #box2 p:nth-child(4) {
+        margin-left: 75px;
+        font-size: 15px;
+        color: #3883ff;
+      }
+      #blue {
+        width: 100x;
+        height: 100x;
+        background-color: white;
+        color: white;
+      }
+      #blue:hover {
+        background-color: rgb(100, 175, 245);
+        color: white;
+      }
+      #box2 > button {
+        width: 20px;
+        height: 20px;
+        margin-left: 35px;
+      }
+      #sign {
+        width: 57%;
+        margin-left: 150px;
+        justify-content: space-between;
+        display: flex;
+        margin: 20px 160px;
+      }
+      #sign > p {
+        margin: 500px;
+        font-family: soleil, Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      #submit {
+        width: 21%;
+        margin: 20px 38px;
+        height: 28px;
+        padding: 10px 20px;
+        font-size: 17px;
+        text-align: center;
+        background-color: black;
+        /* border: 1px solid black; */
+        color: white;
+      }
+      #signP {
+        margin: 10px 25px;
+        text-align: center;
+        line-height: 16px;
+        font-family: soleil, Helvetica, Arial, sans-serif;
+        font-size: 12px;
+      }
+      #signup {
+        display: flex;
+        margin: 50px 20px;
+        padding: 30px 20px;
+        border-top: 1px solid rgb(206, 202, 202);
+        font-family: soleil, Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      #signup > p:nth-child(2) {
+        color: #3883ff;
+      }
+      #box{
+        margin-left: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="serach">
+      <div id="sign">
+        <p>Sign In</p>
+        <i class="fas fa-times"></i>
+      </div>
+<form id="form">
+      <input  id ="email" type="text" placeholder="Email Address*" />
+      <input id="pass" type="text" placeholder="Password*" />
+  
+      <div id="box2">
+       <input type="checkbox" id="box">
+        <p>Remember me</p>
+
+        <i class="fas fa-info-circle"></i>
+        <p id="forget">Forget Password</p>
+            </div>
+      <input type="submit"  id="submit"  placeholder="SIGN IN"value="SIGN " ></input> </form>
+      <p id="signP">
+        This site is protected by reCAPTCHA and the Google Privacy Policy and
+        Terms of Service apply.
+      </p>
+      <div id="signup">
+        <p>Don’t have an account?</p>
+        <p>Sign Up Now</p>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.getElementById("forget").addEventListener("click", function () {
+    window.location.href = "forget.html";
+  });
+  document.getElementById("signup").addEventListener("click", function () {
+    window.location.href = "signup.html";
+  });
+  
+  document.querySelector("form").addEventListener("submit", signinForm);
+  var regdUser =JSON.parse(localStorage.getItem("userDataBase"));
+//   console.log(regdUser)
+
+  function signinForm(event) {
+    event.preventDefault();
+    flag=0;
+    var email = document.querySelector("#email").value;
+    var pass = document.querySelector("#pass").value;
+    // console.log(email, pass);
+if(email=="" || pass==""){
+alert("Inalid input");
+return ;
+}
+for(var i=0;i<regdUser.length;i++){
+    console.log(regdUser[i].userPass)
+
+    if(regdUser[i].userEmail==email && regdUser[i].userPass ==pass){
+      flag=1;
+    }}
+    if(flag==1){
+      alert("Login successfully");
+
+      window.location.href="land_page.html"
+    }
+    else{
+      alert("Wrong Email nad password...Please Sign UP");
+      window.location.href="signup.html"
+    }}
+
+  
+</script>

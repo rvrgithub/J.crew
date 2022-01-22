@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/11e556d214.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+      #container {
+        width: 100%;
+        height: 60px;
+        border-bottom: 1px solid rgb(218, 215, 215);
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+       z-index: 10; 
+        margin:0;
+        background-color: white;
+        cursor: pointer;
+        top: 0px;
+      }
+      
+      #container > div:nth-child(1) {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        font-size: 17px;
+      }
+      #container > div:nth-child(2) {
+        display: flex;
+        width: 30%;
+        justify-content: space-evenly;
+      }
+      img {
+        width: 150px;
+        height: 30px;
+        margin: 0 20px;
+      }
+      #container > div > div:nth-child(7) {
+        color: red;
+      }
+      input {
+        width: 150px;
+        height: 30px;
+        font-size: 20px;
+        border: 1px solid rgb(248, 242, 242);
+      }
+      #search {
+        height: 20px;
+        width: 25px;
+        margin: 5px;
+      }
+      input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+      #sec_div {
+        padding: 10px;
+      }
+      #sec_div > div:nth-child(1) {
+        display: flex;
+        margin: 0;
+        width: 200px;
+        height: 35px;
+        font-size: 17px;
+        border: 1px solid black;
+      }
+      #sec_div > div:nth-child(2) {
+        font-size: 18px;
+        margin-top: 8px;
+      }
+      #login {
+        height: 20px;
+        width: 25px;
+        margin: 5px;
+      }
+    
+       
+#dropdown{
+ 
+  display: grid;
+  position: relative;
+}
+
+#drop_lis{
+  display: none;
+  position: absolute;
+  background-color: white;
+  border-top: 1.5px solid black;
+  width:fit-content;
+  margin-top: 39px;
+  z-index: 1;
+}
+
+#drop_lis a:nth-child(1){
+  font-size: 20px;
+  font-weight: bolder;
+}
+#drop_lis a{
+  color: black;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+#dropdown:hover #drop_lis{
+  display: block;
+  border: 1px solid black;
+  height: 400px;
+}
+#drop_lis a:hover{
+  width:fit-content;
+  /* border-bottom:1px solid black; */
+  
+}
+
+
+
+/* end of nav bar//////////////////////////////// */
+
+#shop_container{
+    width: 80%;
+    /* height: 550px; */
+    margin: 30px auto;
+    /* border: 1px solid rgb(212, 23, 23); */
+    display: flex;
+    padding: 10px;
+    justify-content:space-between;
+}
+#left_div{
+    width:65%;
+    height:700px;
+    /* position: fixed; */
+    border-top: 1px solid rgb(216, 194, 194);
+    border-left: 1px solid rgb(216, 194, 194);
+    border-right: 1px solid rgb(216, 194, 194);
+}
+#right_div{
+    width: 32%;
+    height: 400px;
+  margin-bottom: 30px;
+    border: 1px solid rgb(216, 194, 194);
+    padding: 10px;
+}
+
+#head{
+    text-align: center;
+    margin: 30px ;
+    font-size: 35px;
+}
+h3{
+    margin-top: 80px;
+    text-align: center;
+}
+ #l2_div ,#l1_div{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgb(187, 184, 184);
+}
+#l2_div{
+    height: 35px;
+}
+#l2_div>div ,#l1_div >div{
+    display: flex;
+    width: 500%;
+    height: 40px;
+    /* border-bottom: 1px solid black; */
+    justify-content: left;
+    /* padding: 10px; */
+}
+#l2_div>div>p{
+    color: grey;
+    font-size: 15px;
+    margin-left: 10px;
+}
+ #l1_div>div>p{
+    margin-left: 10px;
+    font-family :Soleil, Times, serif;
+}
+#l1_div>div:nth-child(1) p:nth-child(1){
+font-size: 20px;
+margin-top: 15px;
+font-weight: bolder;
+}
+#l1_div>div>p:nth-child(2){
+font-size: 17px;
+color: grey;
+margin-left: 15px;
+}
+#l1_div>div:nth-child(2) p{
+font-size: 17px;
+color: grey;
+text-align: right;
+margin-left: 110px;
+}
+#l2_div>div:nth-child(2) p:nth-child(1) {
+    /* text-align: right; */
+    justify-content: right;
+    margin-left: 150px;
+    margin-right: 50px;
+    /* color: blueviolet; */
+}
+#l1_div>div:nth-child(2)>p:nth-child(2){
+font-size: 20px;
+color: blue;
+/* margin-top: 23px; */
+margin-left: 15px;
+font-weight: bolder;
+font-size: 17px;
+}
+#main_div{
+    width: 96%;
+    height: 200px;
+    /* border: 1px solid rgb(211, 20, 20); */
+    padding: 10px;
+    /* margin-bottom: 20px; */
+    display: flex;
+    margin: auto;
+}
+
+#main_div>div:nth-child(1){
+    width: 26%;
+    height: 200px;
+    /* border: 1px solid black; */
+    /* padding: 10px; */
+}
+#main_div>div:nth-child(2){
+    width: 42%;
+    height: 200px;
+    /* border: 1px solid black; */
+    /* padding: 10px; */
+}
+#main_div>div:nth-child(2) p{
+    font-size: 14px;
+/* color: blueviolet; */
+    margin: 10px;
+    line-height: 22px;
+    font-weight:bolder;
+    font-family:Soleil, Helvetica, Arial, sans-serif;
+}
+#main_div>div:nth-child(3){
+    width: 17%;
+    height: 100%;
+    text-align: right;
+    margin-right: 20px;
+    /* border: 1px solid rgb(18, 211, 12); */
+    /* margin-bottom: 50px; */
+    /* padding: 10px; */
+}
+#main_div>div:nth-child(4){
+    width: 100px;
+    height: 45px;
+    /* margin-top: 30px; */
+    border: 1px solid rgb(172, 167, 167);
+   display: flex;
+   /* color: blueviolet; */
+}
+
+#main_div>div:nth-child(4) button{
+    width: 25px;
+    margin-top: 9px;
+    /* margin-left: 10px; */
+    height: 30px;
+    border: none;
+    font-size: 20px;
+    font-weight: bolder;
+    padding-bottom: 5px;
+    background-color: white;
+}
+#h1{
+    margin: 5px 15px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+#end_div{
+    width: 100%;
+    margin-top: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+    color: grey;
+    /* color: blueviolet; */
+    margin-bottom: 60px;
+}
+
+#right_div>div{
+    width: 90%;
+    font-size: 17px;
+    height: 30px;
+    display: flex;
+    /* color: blueviolet; */
+    font-family :Soleil, Helvetica, Arial, sans-serif;
+    /* border: 1px solid black; */
+}
+#right_div>div:nth-child(1){
+    font-size: 17px;
+    /* color: grey; */
+    margin: 10px 0;
+}
+#right_div>div:nth-child(2){
+    font-size: 22;
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+#right_div>div:nth-child(3){
+    font-size: 15px;
+    color: grey;
+    /* color: blueviolet; */
+}
+#right_div>div:nth-child(4){
+    margin: 30px 20px;
+    width: 50%;
+    text-align: center;
+    height: 20px;
+    background-color: blue;
+    color: white;
+    padding:20px 60px;
+}
+ #p10{
+    margin:20px;
+    margin-bottom: 220px;
+    font-weight: 700;
+    color: rgb(14, 13, 13);
+}
+
+#h2{
+  font-size: 18px;
+  /* text-align: right; */
+  margin-top: 10px;
+  margin-left: 90px;
+}
+#h3{
+  margin-top: 11px;
+  margin-left: 115px;
+  /* font-size: 10px; */
+}
+
+#add_input{
+  width: 270px;
+  /* text-align: center; */
+  margin-left: 30px;
+  border: 1px solid black;
+  
+}
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div>
+        <div>
+          <img
+            id="nav"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR35ReW6qeu-PQNts_NgPBnalUFT5X0E1TYJsYFulEaiiHzpn4MO1-VALdL_AwE8W3FKMA&usqp=CAU"
+            alt="Error"
+          />
+        </div>
+        <!-- <div id="dropdown"> -->
+        <div id="new_drop" >New</div>
+  <!-- <div id="drop_lis">
+    <a href="#">Shop New Arrivals</a>
+    <a href="#">For Women</a> 
+    <a href="#">For Men</a>
+    <a href="#">  For Girls</a>
+    <a href="#">For Boys</a>
+  
+  </div>
+<div id="drop_lis">
+  <a href="#">Women’s Stories</a>
+  <a href="#">  STYLE</a>
+  <a href="#">What to wear next: cashmere & denim with Brie Welch</a>
+  <a href="#">What to wear next: cashmere & denim with Brie Welch</a>
+
+  <a href="#">Destination: Sun with Clémentine Desseaux</a>
+  <a href="#">EDITS</a>
+  <a href="#">Most wanted: the colorblock quilted puffer jacket</a>
+  <a href="#"> The edit: trail mix</a>
+  <a href="#">The edit: sorbet shades</a>
+</div>
+<div id="drop_lis">
+  <a href="#">Women’s Stories</a>
+  <a href="#">  STYLE</a>
+  <a href="#">What to wear next: cashmere & denim with Brie Welch</a>
+  <a href="#">What to wear next: cashmere & denim with Brie Welch</a>
+
+  <a href="#">Destination: Sun with Clémentine Desseaux</a>
+  <a href="#">EDITS</a>
+  <a href="#">Most wanted: the colorblock quilted puffer jacket</a>
+  <a href="#"> The edit: trail mix</a>
+  <a href="#">The edit: sorbet shades</a>
+</div>
+<div></div>
+<div></div>
+</div> -->
+        <div id="women">Women</div>
+        <div id="men">Men</div>
+        <div id="kids">Kids</div>
+        <div id="cas">Cashmere</div>
+        <div id="sale">Sale</div>
+      </div>
+      <div id="sec_div">
+        <div>
+          <div>
+            <img
+              id="search"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2rFpWpJgyvrdrNVoJzcKk1qgjUvQH1x9a0Q&usqp=CAU"
+            />
+          </div>
+          <input type="text" placeholder="Search j.crew" />
+        </div>
+        <div id="signin">Sign In</div>
+        <div>
+          <img 
+            id="login" 
+            src="https://www.clipartkey.com/mpngs/m/319-3198586_password-icons-png.png"/>
+        </div>
+      </div>
+    </div>
+    <h3>Have a question? We can help.-*</h3>
+    <hr>
+   <div id="shop_container"></div>
+  </body>
+</html>
+<script>
+  var shopItem =[];
+  var count1=0
+var shopData =JSON.parse(localStorage.getItem("shopItmeData"));
+console.log(shopData);
+
+var left_div= document.createElement("div");
+var right_div =document.createElement("div");
+left_div.setAttribute("id","left_div")
+right_div.setAttribute("id","right_div")
+var l1_div =document.createElement("div");
+l1_div.setAttribute("id","l1_div");
+var l1_1_div =document.createElement("div");
+var l1_2_div =document.createElement("div");
+var l2_div =document.createElement("div");
+l2_div.setAttribute("id","l2_div");
+var l2_1_div =document.createElement("div");
+var l2_2_div =document.createElement("div");
+var main_div =document.createElement("div");
+main_div.setAttribute("id","main_div");
+var main1_div = document.createElement("div");
+var main2_div = document.createElement("div");
+var main3_div = document.createElement("div");
+var main4_div = document.createElement("div");
+
+var p1= document.createElement("p");
+var p2 =document.createElement("p");
+var p3=document.createElement("p");
+var p4=document.createElement("p");
+var p5=document.createElement("p");
+var p6=document.createElement("p");
+var p7=document.createElement("p");
+p1.textContent="SHOPPING BAG";
+p2.textContent="item";
+p3.textContent="Have an account?";
+p4.textContent="Sign in";
+p4.addEventListener("click",function(){
+    window.location.href="signin.html";
+})
+p5.textContent="ITEM";
+p6.textContent="PRICE";
+p7.textContent="QTY";
+l1_1_div.append(p1,p2);
+l1_2_div.append(p3,p4)
+l2_1_div.append(p5);
+l2_2_div.append(p6,p7);
+l2_div.append(l2_1_div,l2_2_div);
+l1_div.append(l1_1_div,l1_2_div);
+// Mapping part ...........
+shopData.map(function(element,index){
+  count1++;
+    var image =document.createElement("img");
+    var p8=document.createElement("p");
+    var p9 =document.createElement("p");
+    var p10 =document.createElement("p");
+    var end_div =document.createElement("div");
+    end_div.setAttribute("id","end_div");
+    var p11=document.createElement("p");
+    var p12=document.createElement("p");
+    var p13= document.createElement("p");
+    p10.setAttribute("id","p10");
+   image.setAttribute("src",element.imgUrl);
+   p8.textContent = element.p1;
+    p9.textContent = element.p2;
+    p10.textContent= `=${ element.price}`;
+    end_div.append(p11,p12,p13);
+    p11.textContent="Remove";
+    p11.addEventListener("click",function(){
+      
+        remove(index);
+    })
+    p12.textContent="SAve For Letter";
+    p13.textContent="Edit";
+    p13.addEventListener("click",function(){
+     window.location.href="card.html";
+    })
+   main1_div.append(image);
+   main2_div.append(p8,p9, end_div);
+   main3_div.append(p10);
+   
+});
+
+function remove(index){
+    console.log(index);
+    shopData.splice(index,1);
+    console.log(shopData);
+}
+// Increment and Dercrement Part..........................
+var count=0
+var btn1=document.createElement("button");
+btn1.textContent = "+";
+   var btn2 =document.createElement("button");
+   btn2.textContent="-";
+   var h1=document.createElement("h1");
+   h1.setAttribute("id","h1");
+h1.textContent=count;
+btn1.addEventListener("click",incFun);
+    function incFun(){
+        count++;
+        var add =JSON.parse(localStorage.getItem("shopItmeData"));
+        // console.log("inside inc");
+        document.querySelector("#h1").innerHTML =count;
+        document.querySelector("#login").innerHTML=count;
+    }
+  btn2.addEventListener("click",decFun);
+    function decFun(event){
+      if(count <= 0){
+            return;
+        }
+        count--;
+        // console.log("inside dec");
+        document.querySelector("#h1").innerHTML =count;
+        document.querySelector("#login").innerHTML=count;
+    }
+    // end this.......................
+
+// right_div Part..................
+var rdiv1 =document.createElement("div");
+var rdiv2 =document.createElement("div");
+var rdiv3 =document.createElement("div");
+var rdiv4=document.createElement("div");
+ var p14 =document.createElement("p");
+ var p15=document.createElement("p");
+ var p16=document.createElement("p");
+ var p17=document.createElement("p");
+ var p18=document.createElement("p");
+ var h3= document.createElement("h3");
+ var h2=document.createElement("h2");
+ h3.textContent=`= ${count1}`;
+ h2.setAttribute("id","h2");
+ h3.setAttribute("id","h3");
+p14.textContent="Item Subtotal";
+p15.textContent="Estimated Total";
+p16.textContent="Shipping calculated in Checkout" ;
+p17.textContent="By clicking ‘Check Out Now’, you will be redirected to the eShopWorld checkout page where payment will be taken and your order fulfilled by eShopWorld, J.Crew's preferred partner for international sales."
+p18.textContent="Add a promo";
+var add_input =document.createElement("input");
+add_input.placeholder="10% discount";
+add_input.setAttribute("id", "add_input");
+rdiv1.append(p14, h3);
+rdiv2.append(p15,h2);
+rdiv3.append(p16);
+rdiv4.textContent="CHECK OUT NOW";
+rdiv4.addEventListener("click",function(){
+  alert("Got To Payment option");
+     window.location.href="payment.html";
+     
+    })
+right_div.append(rdiv1,rdiv2,rdiv3,rdiv4,p17,p18, add_input);
+
+    main4_div.append(btn1,h1,btn2);
+main_div.append(main1_div,main2_div,main3_div,main4_div)
+left_div.append(l1_div,l2_div,main_div);
+document.querySelector("#shop_container").append(left_div,right_div);
+
+var total = shopData.reduce(function(acc,cv){
+        return acc+ Number(cv.price)
+    },0)
+    
+    document.querySelector("h2").textContent = `= ${total}`
+    console.log(total);
+
+    // 
+// localStorage.setItem("totalItem").
+
+    document.getElementById("nav").addEventListener("click", function () {
+    window.location.href = "land_page.html";
+  });
+  document.getElementById("men").addEventListener("click", function () {
+    window.location.href = "man.html";
+  });
+  document.getElementById("women").addEventListener("click", function () {
+    window.location.href = "women.html";
+  });
+  document.getElementById("kids").addEventListener("click", function () {
+    window.location.href = "kids.html";
+  });
+  
+  document.getElementById("signin").addEventListener("click", function () {
+    window.location.href = "signin.html";
+  });
+</script>
